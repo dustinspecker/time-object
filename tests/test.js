@@ -18,8 +18,8 @@ test('it wraps object methods with console.time and console.timeEnd', t => {
     func1() {
       return this.value
     },
-    func2() {
-      return 'bye'
+    func2(a, b, c) {
+      return a + b + c
     }
   }
 
