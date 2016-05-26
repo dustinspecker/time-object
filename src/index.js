@@ -11,7 +11,8 @@ module.exports = obj => {
 
       obj[key] = (...args) => {
         console.time(key)
-        const returnValue = fn(...args)
+        /* eslint-disable prefer-reflect */
+        const returnValue = fn.apply(obj, args)
         console.timeEnd(key)
 
         return returnValue

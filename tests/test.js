@@ -16,7 +16,7 @@ test('it wraps object methods with console.time and console.timeEnd', t => {
   const obj = {
     value: 'hello',
     func1() {
-      return 'hello'
+      return this.value
     },
     func2() {
       return 'bye'
@@ -33,7 +33,7 @@ test('it wraps object methods with console.time and console.timeEnd', t => {
   t.truthy(console.timeEnd.callCount() === 1)
   t.truthy(console.timeEnd.calledWith('func1'))
 
-  t.truthy(obj.func2() === 'bye')
+  t.truthy(obj.func2('b', 'y', 'e') === 'bye')
   t.truthy(console.time.callCount() === 2)
   t.truthy(console.time.calledWith('func2'))
   t.truthy(console.timeEnd.callCount() === 2)
