@@ -14,7 +14,11 @@
     "type": "git",
     "url": "https://github.com/dustinspecker/time-object.git"
   },
-  "keywords": [],
+  "keywords": [
+    "time",
+    "object",
+    "debug"
+  ],
   "author": {
     "name": "Dustin Specker",
     "email": "DustinSpecker@DustinSpecker.com",
