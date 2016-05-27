@@ -4,9 +4,13 @@ import test from 'ava'
 
 import timeObject from '../lib/'
 
-test('it throws TypeError if obj is not an object', t => {
+test('it throws TypeError if obj is not a plain object', t => {
   t.throws(timeObject, TypeError)
   t.throws(timeObject, /Expected obj to be an object/)
+
+  const arrayThrows = () => timeObject([])
+  t.throws(arrayThrows, TypeError)
+  t.throws(arrayThrows, /Expected obj to be an object/)
 })
 
 test('it wraps object methods with console.time and console.timeEnd', t => {

@@ -28,7 +28,9 @@
   "files": [
     "lib"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "is-plain-obj": "^1.1.0"
+  },
   "devDependencies": {
     "austin": "^0.1.1",
     "ava": "^0.15.0",

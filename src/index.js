@@ -1,7 +1,8 @@
 'use strict'
+import isPlainObj from 'is-plain-obj'
 
 module.exports = obj => {
-  if (typeof obj !== 'object') {
+  if (!isPlainObj(obj)) {
     throw new TypeError('Expected obj to be an object')
   }
 
