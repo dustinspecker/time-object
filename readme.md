@@ -25,7 +25,7 @@ import timeObject from 'time-object'
 const obj = {
   value: 'hello',
   func1() {
-    return 'hello'
+    return this.value
   },
   func2() {
     return 'bye'
